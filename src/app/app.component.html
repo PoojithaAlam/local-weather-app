@@ -1,5 +1,14 @@
 <div style="text-align: center;">
+  <mat-toolbar color="primary">
+  </mat-toolbar>
   <h1>Local Weather</h1>
-  <div>Here is the Weather!!</div>
-  <app-current-weather> </app-current-weather>
+  <div>
+    <p>Here is the Weather!!!</p></div>
+  <div>
+  <app-city-search (searchEvent)="doSearch($event) "></app-city-search>
+  </div>
+  <h2>Current Weather</h2>
+  <mat-card style="max-width:400px; margin-left:1070px;margin-top:50px;">
+  <app-current-weather [current]="currentWeather1"></app-current-weather>
+</mat-card>
 </div>
